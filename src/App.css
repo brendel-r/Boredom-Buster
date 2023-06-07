@@ -14,9 +14,6 @@ body {
   min-height: 100vh;
 }
 
-
-
-
 .light-mode .mode-toggle-button {
   background-color: #f1f1f1;
   box-shadow: 0 0 15px orangered;
