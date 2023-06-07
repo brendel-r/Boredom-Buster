@@ -1,0 +1,22 @@
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  padding-top: 1em;
+}
+
+#header-logo {
+  height: 10em;
+  margin-right: 5em; /* Add some spacing between the logo and slogan */
+}
+
+.slogan {
+  font-family: 'Gloria Hallelujah', sans-serif;
+  padding: .4em;
+  border-radius: 10px;
+  color: rgb(42, 167, 82);
+  text-shadow: 0 0 18px rgb(27, 179, 57);
+  border: 1px solid red;
+  box-shadow: 0 0 15px red;
+}
