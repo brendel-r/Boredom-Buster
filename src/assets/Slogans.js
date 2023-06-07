@@ -1,8 +1,8 @@
 const solgans = [
 "Boredom, meet your match!",
-"Boredom Busters: Your personal entertainment genie.",
+"Welcome to your personal entertainment genie.",
 "Discover a world of endless possibilities.",
-"Conquer boredom like never before",
+"Conquer boredom like never before!",
 "Unleash the magic of spontaneity!",
 "Embrace the unexpected!",
 "Unleash adventure, one random activity at a time.",

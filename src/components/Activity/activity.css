@@ -1,0 +1,24 @@
+.activity-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  max-width: 600px;
+  height: auto;
+  padding: 5em;
+  margin: 0 auto;
+  color: white;
+  border: 2px solid rgba(0, 0, 255, 0.5);
+  box-shadow: 0 0 15px rgb(0, 115, 255);
+  text-align: center;
+}
+
+.current-activity, .current-activity-type, .current-activity-people, .current-activity-people {
+  font-family: 'Gloria Hallelujah', sans-serif;
+  padding: .4em;
+  border-radius: 10px;
+  color: rgb(239, 160, 24);
+  text-shadow: 0 0 30px rgb(247, 162, 15);
+ 
+}
