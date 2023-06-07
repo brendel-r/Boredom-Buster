@@ -6,6 +6,11 @@ import Activity from './components/Activity/activity';
 
 function App() {
   const [data, setData] = useState({});
+  const [isDarkMode, setIsDarkMode] = useState(true);
+
+  const toggleMode = () => {
+    setIsDarkMode(!isDarkMode);
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -21,10 +26,10 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <Header />
-      <h1>Bored Activity</h1>
+    <div className={`app-container ${isDarkMode ? 'dark-mode' : 'light-mode'}`}>
+      <Header isDarkMode={isDarkMode} toggleMode={toggleMode} />
       <Activity data={data} />
+      
     </div>
   );
 }

@@ -1,22 +1,54 @@
 .header-container {
   display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
- 
   padding-top: 1em;
+  margin-bottom: 3em;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
 }
 
 #header-logo {
-  height: 10em;
-  margin-right: 5em; /* Add some spacing between the logo and slogan */
+  width: 42em;
+  margin-right: 3em;
 }
 
 .slogan {
   font-family: 'Gloria Hallelujah', sans-serif;
-  padding: .4em;
-  border-radius: 10px;
-  color: rgb(42, 167, 82);
-  text-shadow: 0 0 18px rgb(27, 179, 57);
-  border: 1px solid red;
-  box-shadow: 0 0 15px red;
+  width: 23em;
+  padding: .1em .4em;
+  border-radius: 25px;
+  color: green;
+  text-shadow: 0 0 30px rgb(15, 247, 61);
+  border: 1px dotted green;
+  box-shadow: 0 0 15px  rgb(42, 167, 82);
+  margin-right: 4em;
+}
+
+.mode-toggle-button {
+  margin: 1em ;
+  padding: 10px 15px;
+  font-size: 15px;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+  border-radius: 15px;
+  box-shadow: 0 0 20px orangered;
+}
+
+.toggle-btn {
+  margin-right: 5em;
+}
+
+.light-mode .mode-toggle-button {
+  background-color: #f1f1f1;
+}
+
+.dark-mode .mode-toggle-button {
+  background-color: #222;
+  color: #fff;
 }
