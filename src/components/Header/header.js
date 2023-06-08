@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import './header.css';
+import { Link } from 'react-router-dom';
 import logo from '../../assets/bb-logo.png';
 import slogans from '../../assets/Slogans.js';
+
 
 const Header = ({ isDarkMode, toggleMode }) => {
   const [randomSlogan, setRandomSlogan] = useState('');
@@ -15,7 +17,9 @@ const Header = ({ isDarkMode, toggleMode }) => {
     <header>
       <div className="header-container">
         <div className="header-content">
-          <img src={logo} id="header-logo" alt="Boredom Buster Logo" />
+          <Link to="/" className="logo-button">
+            <img src={logo} id="header-logo" alt="Boredom Buster Logo" />
+          </Link>
           <h1 className="slogan">{randomSlogan}</h1>
         </div>
         <div className="toggle-btn">

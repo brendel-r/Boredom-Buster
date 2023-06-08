@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { fetchAllData } from "../../apiCalls";
 import "./activity.css";
 import { useHistory } from "react-router-dom";
+import { capitalizeType } from "../../utilities";
 
 const Activity = ({ addCompletedActivity }) => {
   const [currentActivity, setCurrentActivity] = useState(null);
@@ -48,17 +49,16 @@ const Activity = ({ addCompletedActivity }) => {
 
   return (
     <div className="activity-card">
-      <button
-        className="completed-list-button"
-        onClick={handleShowCompletedList}
-      >
-        Completed Activity List
-      </button>
+      <div className="completed-list-container">
+        <button className="completed-list-button" onClick={handleShowCompletedList}>
+          Completed Activity List
+        </button>
+      </div>
 
       {currentActivity ? (
         <>
           <h2 className="current-activity">{currentActivity.activity}</h2>
-          <p className="current-activity-type">Type: {currentActivity.type}</p>
+          <p className="current-activity-type">Type: {capitalizeType(currentActivity.type)}</p>
           <p className="current-activity-people">
             Participants: At least {currentActivity.participants}
           </p>

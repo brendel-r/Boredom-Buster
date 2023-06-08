@@ -17,6 +17,16 @@
   line-height: 1;
 }
 
+.completed-list-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  margin-top: -120px;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+
 .current-activity {
   font-family: 'Gloria Hallelujah', sans-serif;
   padding: 0.4em;
@@ -42,17 +52,17 @@
 }
 
 .skip-button,
-.completed-button {
+.completed-button,
+.completed-list-button {
   margin: 0 0.25em;
-  padding: 1em 2em;
-  border-radius: 5px;
-  background-color: #f1f1f1;
+  padding: .8em 1.3em;
+  border-radius: 15px;
   border: none;
   cursor: pointer;
-  color: black;
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgb(239, 160, 24);
   font-weight: bold;
+  font-size: 0.6em;
+  box-shadow: 0 0 20px rgb(239, 160, 24);
+  border: 2px solid orange;
 }
 
 .skip-button {
@@ -60,13 +70,15 @@
 }
 
 .light-mode .skip-button,
-.light-mode .completed-button {
+.light-mode .completed-button,
+.light-mode .completed-list-button {
   background-color: #f1f1f1;
   color: black;
 }
 
 .dark-mode .skip-button,
-.dark-mode .completed-button {
+.dark-mode .completed-button,
+.dark-mode .completed-list-button {
   background-color: #222;
   color: #fff;
 }
