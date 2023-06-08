@@ -5,38 +5,46 @@
   align-items: center;
   padding-top: 1em;
   margin-bottom: 6em;
+  width: 100vw;
 }
 
 .header-content {
   display: flex;
+  justify-content: space-around;
   align-items: center;
+  width: 100%;
 }
 
 #header-logo {
-  width: 42em;
-  margin-right: 3em;
+  width: 150%;
+  margin: 0;
 }
 
 .slogan {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   font-family: 'Gloria Hallelujah', sans-serif;
-  width: 23em;
-  padding: .1em .4em;
+  padding: 1em 1em;
   border-radius: 25px;
   color: green;
   text-shadow: 0 0 30px rgb(15, 247, 61);
   border: 2px solid green;
-  box-shadow: 0 0 15px  rgb(42, 167, 82);
-  margin-right: 4em;
+  box-shadow: 0 0 15px rgb(42, 167, 82);
+  line-height: 1;
 }
 
 .mode-toggle-button {
-  margin-left: 83em ;
+  margin-left: 80em;
   padding: 10px 15px;
   font-size: 15px;
   font-weight: bold;
   color: black;
   cursor: pointer;
   border-radius: 15px;
+  border: 2px solid blue
 }
 
 .toggle-btn {

@@ -26,6 +26,7 @@
   cursor: pointer;
   border-radius: 15px;
   box-shadow: 0 0 15px palevioletred;
+  border: 2px solid palevioletred;
   padding: 0.6em;
   font-size: 0.6em;
   font-weight: bold;
