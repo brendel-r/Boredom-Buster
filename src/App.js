@@ -1,11 +1,10 @@
-
-import React, { useEffect, useState } from 'react';
-import './App.css';
-import { fetchAPI } from './apiCalls.js';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Header from './components/Header/header';
-import Activity from './components/Activity/activity';
-import CompletedActivities from './components/Completed/completedActivites';
+import React, { useEffect, useState } from "react";
+import "./App.css";
+import { fetchAPI } from "./apiCalls.js";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Header from "./components/Header/header";
+import Activity from "./components/Activity/activity";
+import CompletedActivities from "./components/Completed/completedActivites";
 
 function App() {
   const [data, setData] = useState({});
@@ -19,10 +18,12 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetchAPI('http://www.boredapi.com/api/activity/');
+        const response = await fetchAPI(
+          "http://www.boredapi.com/api/activity/"
+        );
         setData(response);
       } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error("Error fetching data:", error);
       }
     };
 
@@ -35,7 +36,9 @@ function App() {
 
   return (
     <Router>
-      <div className={`app-container ${isDarkMode ? 'dark-mode' : 'light-mode'}`}>
+      <div
+        className={`app-container ${isDarkMode ? "dark-mode" : "light-mode"}`}
+      >
         <Header isDarkMode={isDarkMode} toggleMode={toggleMode} />
 
         <Switch>

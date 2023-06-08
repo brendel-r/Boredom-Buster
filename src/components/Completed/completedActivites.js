@@ -1,12 +1,12 @@
-import React from 'react';
-import { useHistory } from 'react-router-dom';
-import './completedActivites.css';
+import React from "react";
+import { useHistory } from "react-router-dom";
+import "./completedActivites.css";
 
 const CompletedActivities = ({ completedActivities }) => {
   const history = useHistory();
 
   const handleReturnHome = () => {
-    history.push('/activity');
+    history.push("/activity");
   };
 
   if (!completedActivities || !Array.isArray(completedActivities)) {
@@ -29,6 +29,5 @@ const CompletedActivities = ({ completedActivities }) => {
     </div>
   );
 };
-
 
 export default CompletedActivities;
