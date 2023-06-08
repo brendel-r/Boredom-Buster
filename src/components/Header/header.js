@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import './header.css';
 import logo from '../../assets/bb-logo.png';
 import slogans from '../../assets/Slogans.js';
@@ -16,15 +15,13 @@ const Header = ({ isDarkMode, toggleMode }) => {
     <header>
       <div className="header-container">
         <div className="header-content">
-          <Link to="/">
-            <img src={logo} id="header-logo" alt="Boredom Buster Logo" />
-          </Link>
+          <img src={logo} id="header-logo" alt="Boredom Buster Logo" />
           <h1 className="slogan">{randomSlogan}</h1>
-        </div >
+        </div>
         <div className="toggle-btn">
-        <button onClick={toggleMode} className="mode-toggle-button">
-          {isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
-        </button>
+          <button onClick={toggleMode} className="mode-toggle-button">
+            {isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+          </button>
         </div>
       </div>
     </header>
