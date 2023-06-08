@@ -44,6 +44,7 @@
   color: black;
   border-radius: 25px;
   box-shadow: 0 0 15px rgb(0, 115, 255);
+  font-weight: bold;
 }
 
 .skip-button {

@@ -1,8 +1,10 @@
+
 import React, { useState, useEffect } from 'react';
 import { fetchAllData } from '../../apiCalls';
 import './activity.css';
+import { useHistory } from 'react-router-dom';
 
-const Activity = () => {
+const Activity = ({ addCompletedActivity }) => {
   const [currentActivity, setCurrentActivity] = useState(null);
 
   useEffect(() => {
@@ -27,24 +29,48 @@ const Activity = () => {
     }
   };
 
+  const handleCompletedClick = () => {
+    if (currentActivity) {
+      addCompletedActivity(currentActivity.activity);
+      console.log('Completed Activity:', currentActivity.activity);
+    }
+  };
+
+  const history = useHistory();
+
+  const handleShowCompletedList = () => {
+    history.push('/completed');
+  };
+
   return (
-    <div className='activity-card'>
+    <div className="activity-card">
+      <button className="completed-list-button" onClick={handleShowCompletedList}>
+        Completed Activity List
+      </button>
+
       {currentActivity ? (
         <>
-          <h2 className='current-activity'>{currentActivity.activity}</h2>
-          <p className='current-activity-type'>Type: {currentActivity.type}</p>
-          <p className='current-activity-people'>Participants: At least {currentActivity.participants}</p>
+          <h2 className="current-activity">{currentActivity.activity}</h2>
+          <p className="current-activity-type">Type: {currentActivity.type}</p>
+          <p className="current-activity-people">
+            Participants: At least {currentActivity.participants}
+          </p>
         </>
       ) : (
         <p>Loading activity...</p>
       )}
 
-      <div className='button-container'>
-        <button className='skip-button' onClick={handleSkipClick}>Skip</button>
-        <button className='completed-button'>Completed</button>
+      <div className="button-container">
+        <button className="skip-button" onClick={handleSkipClick}>
+          Skip
+        </button>
+        <button className="completed-button" onClick={handleCompletedClick}>
+          Completed
+        </button>
       </div>
     </div>
   );
 };
 
 export default Activity;
+
