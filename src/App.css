@@ -19,12 +19,12 @@ body {
 
 .light-mode .mode-toggle-button {
   background-color: #f1f1f1;
-  box-shadow: 0 0 15px orangered;
+  box-shadow: 0 0 30px rgb(41, 80, 233);
 }
 
 .dark-mode .mode-toggle-button {
   background-color: #222;
   color: #fff;
-  box-shadow: 0 0 20px orangered;
-  border-radius: 25px;
+  box-shadow: 0 0 30px blue;
+  border-radius: 15px;
 }

@@ -1,8 +1,7 @@
-
-import React, { useState, useEffect } from 'react';
-import { fetchAllData } from '../../apiCalls';
-import './activity.css';
-import { useHistory } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { fetchAllData } from "../../apiCalls";
+import "./activity.css";
+import { useHistory } from "react-router-dom";
 
 const Activity = ({ addCompletedActivity }) => {
   const [currentActivity, setCurrentActivity] = useState(null);
@@ -16,35 +15,43 @@ const Activity = ({ addCompletedActivity }) => {
       const [data] = await fetchAllData();
       setCurrentActivity(data);
     } catch (error) {
-      console.error('Error fetching activity:', error);
+      console.error("Error fetching activity:", error);
     }
   };
 
-  const handleSkipClick = async () => {
+  const fetchNewActivity = async () => {
     try {
       const [data] = await fetchAllData();
       setCurrentActivity(data);
     } catch (error) {
-      console.error('Error fetching new activity:', error);
+      console.error("Error fetching new activity:", error);
     }
   };
 
-  const handleCompletedClick = () => {
+  const handleSkipClick = async () => {
+    await fetchNewActivity();
+  };
+
+  const handleCompletedClick = async () => {
     if (currentActivity) {
       addCompletedActivity(currentActivity.activity);
-      console.log('Completed Activity:', currentActivity.activity);
+      console.log("Completed Activity:", currentActivity.activity);
+      await fetchNewActivity();
     }
   };
 
   const history = useHistory();
 
   const handleShowCompletedList = () => {
-    history.push('/completed');
+    history.push("/completed");
   };
 
   return (
     <div className="activity-card">
-      <button className="completed-list-button" onClick={handleShowCompletedList}>
+      <button
+        className="completed-list-button"
+        onClick={handleShowCompletedList}
+      >
         Completed Activity List
       </button>
 
@@ -73,4 +80,3 @@ const Activity = ({ addCompletedActivity }) => {
 };
 
 export default Activity;
-
