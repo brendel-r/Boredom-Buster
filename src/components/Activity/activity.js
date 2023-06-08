@@ -50,7 +50,10 @@ const Activity = ({ addCompletedActivity }) => {
   return (
     <div className="activity-card">
       <div className="completed-list-container">
-        <button className="completed-list-button" onClick={handleShowCompletedList}>
+        <button
+          className="completed-list-button"
+          onClick={handleShowCompletedList}
+        >
           Completed Activity List
         </button>
       </div>
@@ -58,7 +61,9 @@ const Activity = ({ addCompletedActivity }) => {
       {currentActivity ? (
         <>
           <h2 className="current-activity">{currentActivity.activity}</h2>
-          <p className="current-activity-type">Type: {capitalizeType(currentActivity.type)}</p>
+          <p className="current-activity-type">
+            Type: {capitalizeType(currentActivity.type)}
+          </p>
           <p className="current-activity-people">
             Participants: At least {currentActivity.participants}
           </p>

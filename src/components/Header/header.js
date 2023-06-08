@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
-import './header.css';
-import { Link } from 'react-router-dom';
-import logo from '../../assets/bb-logo.png';
-import slogans from '../../assets/Slogans.js';
-
+import "./header.css";
+import { Link } from "react-router-dom";
+import logo from "../../assets/bb-logo.png";
+import slogans from "../../assets/Slogans.js";
 
 const Header = ({ isDarkMode, toggleMode }) => {
-  const [randomSlogan, setRandomSlogan] = useState('');
+  const [randomSlogan, setRandomSlogan] = useState("");
 
   useEffect(() => {
     const randomIndex = Math.floor(Math.random() * slogans.length);
@@ -24,7 +23,7 @@ const Header = ({ isDarkMode, toggleMode }) => {
         </div>
         <div className="toggle-btn">
           <button onClick={toggleMode} className="mode-toggle-button">
-            {isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+            {isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
           </button>
         </div>
       </div>
