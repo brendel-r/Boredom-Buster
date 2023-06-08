@@ -2,23 +2,62 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   width: 80%;
   max-width: 600px;
   height: auto;
-  padding: 5em;
+  padding: 2em;
   margin: 0 auto;
   color: white;
   border: 2px solid rgba(0, 0, 255, 0.5);
+  border-radius: 25px;
   box-shadow: 0 0 15px rgb(0, 115, 255);
   text-align: center;
+  position: relative;
 }
 
-.current-activity, .current-activity-type, .current-activity-people, .current-activity-people {
+.current-activity,
+.current-activity-type,
+.current-activity-people,
+.current-activity-people {
   font-family: 'Gloria Hallelujah', sans-serif;
-  padding: .4em;
+  padding: 0.4em;
   border-radius: 10px;
   color: rgb(239, 160, 24);
   text-shadow: 0 0 30px rgb(247, 162, 15);
- 
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+.skip-button,
+.completed-button {
+  margin: 0 0.25em;
+  padding: 1em 2em;
+  border-radius: 5px;
+  background-color: #f1f1f1;
+  border: none;
+  cursor: pointer;
+  color: black;
+  border-radius: 25px;
+  box-shadow: 0 0 15px rgb(0, 115, 255);
+}
+
+.skip-button {
+  margin-right: 2em;
+}
+
+.light-mode .skip-button,
+.light-mode .completed-button {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.dark-mode .skip-button,
+.dark-mode .completed-button {
+  background-color: #222;
+  color: #fff;
 }
