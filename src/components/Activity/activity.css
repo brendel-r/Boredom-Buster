@@ -82,3 +82,11 @@
   background-color: #222;
   color: #fff;
 }
+
+@media (max-width: 560px) {
+  .skip-button,
+.completed-button {
+  padding: .6em .7em;
+  margin: .5em;
+}
+}
