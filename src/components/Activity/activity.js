@@ -48,12 +48,11 @@ const Activity = ({ addCompletedActivity }) => {
 
   return (
     <div className="activity-card">
-      <button
-        className="completed-list-button"
-        onClick={handleShowCompletedList}
-      >
-        Completed Activity List
-      </button>
+      <div className="completed-list-container">
+        <button className="completed-list-button" onClick={handleShowCompletedList}>
+          Completed Activity List
+        </button>
+      </div>
 
       {currentActivity ? (
         <>
