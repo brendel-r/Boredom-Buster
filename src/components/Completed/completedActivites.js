@@ -1,5 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
+import PropTypes from "prop-types";
 import "./completedActivites.css";
 
 const CompletedActivities = ({ completedActivities }) => {
@@ -28,6 +29,10 @@ const CompletedActivities = ({ completedActivities }) => {
       </button>
     </div>
   );
+};
+
+CompletedActivities.propTypes = {
+  completedActivities: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default CompletedActivities;

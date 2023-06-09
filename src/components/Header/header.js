@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./header.css";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import logo from "../../assets/bb-logo.png";
 import slogans from "../../assets/Slogans.js";
+
 
 const Header = ({ isDarkMode, toggleMode }) => {
   const [randomSlogan, setRandomSlogan] = useState("");
@@ -29,6 +31,11 @@ const Header = ({ isDarkMode, toggleMode }) => {
       </div>
     </header>
   );
+};
+
+Header.propTypes = {
+  isDarkMode: PropTypes.bool.isRequired,
+  toggleMode: PropTypes.func.isRequired,
 };
 
 export default Header;
