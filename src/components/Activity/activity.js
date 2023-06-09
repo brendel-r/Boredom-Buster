@@ -3,9 +3,11 @@ import { fetchAllData } from "../../apiCalls";
 import "./activity.css";
 import { useHistory } from "react-router-dom";
 import { capitalizeType } from "../../utilities";
+import ErrorPage from "../Error/errorPage";
 
 const Activity = ({ addCompletedActivity }) => {
   const [currentActivity, setCurrentActivity] = useState(null);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     fetchData();
@@ -15,8 +17,10 @@ const Activity = ({ addCompletedActivity }) => {
     try {
       const [data] = await fetchAllData();
       setCurrentActivity(data);
+      setError(null);
     } catch (error) {
       console.error("Error fetching activity:", error);
+      setError(error);
     }
   };
 
@@ -24,8 +28,10 @@ const Activity = ({ addCompletedActivity }) => {
     try {
       const [data] = await fetchAllData();
       setCurrentActivity(data);
+      setError(null);
     } catch (error) {
       console.error("Error fetching new activity:", error);
+      setError(error);
     }
   };
 
@@ -46,6 +52,10 @@ const Activity = ({ addCompletedActivity }) => {
   const handleShowCompletedList = () => {
     history.push("/completed");
   };
+
+  if (error) {
+    return <ErrorPage />;
+  }
 
   return (
     <div className="activity-card">

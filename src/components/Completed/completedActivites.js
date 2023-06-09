@@ -6,7 +6,7 @@ const CompletedActivities = ({ completedActivities }) => {
   const history = useHistory();
 
   const handleReturnHome = () => {
-    history.push("/activity");
+    history.push("/");
   };
 
   if (!completedActivities || !Array.isArray(completedActivities)) {
