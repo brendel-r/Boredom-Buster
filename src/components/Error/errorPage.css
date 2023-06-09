@@ -1,0 +1,17 @@
+.error-message {
+  border: 1px solid yellow;
+  border-radius: 25px;
+  box-shadow: 0 0 15px yellow;
+  padding: 1em;
+  text-shadow: 0 0 30px yellow;
+  margin: 0 auto;
+  font-size: 4.5em;
+}
+
+.light-mode .error-message {
+  color: black;
+}
+
+.dark-mode .error-message {
+  color: #fff;
+}
