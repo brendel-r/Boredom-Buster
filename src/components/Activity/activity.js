@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { fetchAllData } from "../../apiCalls";
+import PropTypes from "prop-types";
 import "./activity.css";
 import { useHistory } from "react-router-dom";
 import { capitalizeType } from "../../utilities";
@@ -92,6 +93,10 @@ const Activity = ({ addCompletedActivity }) => {
       </div>
     </div>
   );
+};
+
+Activity.propTypes = {
+  addCompletedActivity: PropTypes.func.isRequired,
 };
 
 export default Activity;
