@@ -3,18 +3,29 @@ export const fetchAPI = (url) => {
     headers: {
       "Content-Type": "application/json",
     },
-  }).then((res) => {
-    if (!res.ok) {
+  })
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error("Something went wrong!");
+      }
+      return res.json();
+    })
+    .catch((error) => {
       throw new Error("Something went wrong!");
-    }
-    return res.json();
-  });
+    });
 };
 
 export const fetchAllData = () => {
-  try {
-    return Promise.all([fetchAPI("http://www.boredapi.com/api/activity/")]);
-  } catch (err) {
-    throw new Error(err.message);
-  }
+  return Promise.all([fetchAPI("http://www.boredapi.com/api/activity")])
+    .then((responses) => {
+      const [activityResponse] = responses;
+      if (!activityResponse) {
+        throw new Error("Something went wrong!");
+      }
+      return [activityResponse];
+    })
+    .catch((error) => {
+      throw new Error(error.message);
+    });
 };
+
