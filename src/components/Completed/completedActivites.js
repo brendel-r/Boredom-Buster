@@ -18,7 +18,9 @@ const CompletedActivities = ({ completedActivities }) => {
     <div className="completed-activities-container">
       <h3>Completed Activities</h3>
       <ul>
+        {console.log(completedActivities)}
         {completedActivities.map((activity, index) => (
+          
           <li key={index}>
             <span className="list-icon">&#10003;</span>&nbsp;{activity}
           </li>

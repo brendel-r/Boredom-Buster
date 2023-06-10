@@ -43,7 +43,7 @@ const Activity = ({ addCompletedActivity }) => {
   const handleCompletedClick = async () => {
     if (currentActivity) {
       addCompletedActivity(currentActivity.activity);
-      console.log("Completed Activity:", currentActivity.activity);
+      console.log(" currentActivity:", currentActivity);
       await fetchNewActivity();
     }
   };
