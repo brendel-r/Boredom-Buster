@@ -88,6 +88,7 @@ const Activity = ({ addCompletedActivity }) => {
           Skip this Activity
         </button>
         <button className="completed-button" onClick={handleCompletedClick}>
+          Mark as Completed
         </button>
       </div>
     </div>
