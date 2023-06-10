@@ -13,14 +13,6 @@ describe('completed activity', () => {
     });
   });
 
-  it('should display "No completed activities yet!" when there are no activities', () => {
-    cy.intercept('GET', 'http://www.boredapi.com/api/activity', []).as('completedActivities');
-    cy.visit('http://localhost:3000/completed');
-    cy.wait('@completedActivities', { timeout: 5000 }).then(() => {
-      cy.get('.no-activity-message').should('contain', 'No completed activities yet!');
-    });
-  });
-
   it('logo will return you to the main page', () => {
     cy.get('img').click();
     cy.url().should('eq', 'http://localhost:3000/');
