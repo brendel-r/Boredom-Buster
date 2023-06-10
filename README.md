@@ -11,7 +11,7 @@ Boredom Busters is designed to be user-friendly and intuitive, providing a seaml
 
 ## Deployment
 
-App is deployed at: [Boredom Busters](https://boredom-buster-3-9ii9oz2xl-brendel-r.vercel.app/)
+App is deployed at: [Boredom Busters](https://boredom-busters-i13e22imd-brendel-r.vercel.app/)
 
 ## Contributors
   - Rachel Brendel [GitHub](https://github.com/brendel-r) / [LinkedIn](https://www.linkedin.com/in/rachel-brendel/)
