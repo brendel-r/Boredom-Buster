@@ -25,4 +25,13 @@ describe('completed activity', () => {
     cy.get('.return-button').click();
     cy.url().should('eq', 'http://localhost:3000/');
   });
+
+  it('displays "No completed activities" when there are none', () => {
+    cy.intercept('GET', 'http://www.boredapi.com/api/activity', { fixture: 'activityFixture1.json' });
+    cy.fixture('emptyFixture.json').as('completedData');
+  
+    cy.visit('http://localhost:3000/completed');
+    
+    cy.get('.completed-activities-container').contains('No completed activities');
+  });
 });
