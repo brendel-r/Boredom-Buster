@@ -14,8 +14,6 @@ const CompletedActivities = ({ completedActivities }) => {
     return (
       <div className="completed-activities-container">
         <h3>{completedActivities.length === 0 ? "No completed activities" : "Completed Activities"}</h3>
-        {completedActivities.length === 0}
-
         <button className="return-button" onClick={handleReturnHome}>
           Return to Home
         </button>
@@ -27,11 +25,17 @@ const CompletedActivities = ({ completedActivities }) => {
     <div className="completed-activities-container">
       <h3>Completed Activities</h3>
       <ul>
-        {completedActivities.map((activity, index) => (
-          <li key={index}>
-            <span className="list-icon">&#10003;</span>&nbsp;{activity}
+        {completedActivities.length === 0 ? (
+          <li className="no-activity-message">
+            No completed activities yet!
           </li>
-        ))}
+        ) : (
+          completedActivities.map((activity, index) => (
+            <li key={index}>
+              <span className="list-icon">&#10003;</span>&nbsp;{activity}
+            </li>
+          ))
+        )}
       </ul>
       <button className="return-button" onClick={handleReturnHome}>
         Return to Home
