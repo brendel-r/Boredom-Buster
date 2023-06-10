@@ -15,7 +15,7 @@ const CompletedActivities = ({ completedActivities }) => {
       <h3>Completed Activities</h3>
       <ul>
         {completedActivities.length === 0 ? (
-          <li>
+          <li className="no-activity-message">
             No completed activities yet!
           </li>
         ) : (
