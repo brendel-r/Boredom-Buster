@@ -16,7 +16,7 @@ export const fetchAPI = (url) => {
 };
 
 export const fetchAllData = () => {
-  return Promise.all([fetchAPI("http://www.boredapi.com/api/activity")])
+  return Promise.all([fetchAPI("https://www.boredapi.com/api/activity")])
     .then((responses) => {
       const [activityResponse] = responses;
       if (!activityResponse) {
