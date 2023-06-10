@@ -23,10 +23,10 @@ App is deployed at: [Boredom Busters](https://boredom-buster-3-9ii9oz2xl-brendel
 
 ## Features
   - Random activity on page load
-  - Skip an activity you done like
+  - Skip an activity you don't like
   - Mark activity as completed
   - View completed activities
-  - Light/Dark mode
+  - Switch between Light/Dark mode
   
 ## Context 
 Building Boredom Busters has been an exciting solo project. Utilizing React, PropTypes, Cypress, JavaScript, HTML, and CSS, I have created an exceptional app for entertainment and combating boredom.
