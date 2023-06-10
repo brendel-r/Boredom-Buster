@@ -19,7 +19,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetchAPI("http://www.boredapi.com/api/activity/");
+        const response = await fetchAPI("https://www.boredapi.com/api/activity/");
         setData(response);
       } catch (error) {
         console.error("Error fetching data:", error);
