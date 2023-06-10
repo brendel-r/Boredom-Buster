@@ -13,24 +13,25 @@ describe('completed activity', () => {
     });
   });
 
-  it('logo', () => {
-    cy.intercept('GET', 'http://www.boredapi.com/api/activity', { fixture: 'activityFixture1.json' });
+  it('logo will return you to main page', () => {
+    // cy.intercept('GET', 'http://www.boredapi.com/api/activity', { fixture: 'activityFixture1.json' });
     cy.get('img').click();
     cy.url().should('eq', 'http://localhost:3000/');
   });
 
-  it('return button', () => {
-    cy.intercept('GET', 'http://www.boredapi.com/api/activity', { fixture: 'activityFixture1.json' });
+  it('return button will return you to main page', () => {
+    // cy.intercept('GET', 'http://www.boredapi.com/api/activity', { fixture: 'activityFixture1.json' });
 
     cy.get('.return-button').click();
     cy.url().should('eq', 'http://localhost:3000/');
   });
 
-  it('should display "No completed activities yet!" when there are no tasks', () => {
-    // Mocking the response with an empty array to simulate no completed activities
-    cy.intercept('GET', 'http://www.boredapi.com/api/activity', { fixture: 'emptyFixture.json' });
+  it('displays "No completed activities" when there are none', () => {
+    cy.intercept('GET', 'http://www.boredapi.com/api/activity', { fixture: 'activityFixture1.json' });
+    cy.fixture('emptyFixture.json').as('completedData');
+  
     cy.visit('http://localhost:3000/completed');
-
-    cy.contains('No completed activities yet!').should('exist');
+    
+    cy.get('.completed-activities-container').contains('No completed activities');
   });
 });

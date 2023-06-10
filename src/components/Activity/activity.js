@@ -85,10 +85,9 @@ const Activity = ({ addCompletedActivity }) => {
 
       <div className="button-container">
         <button className="skip-button" onClick={handleSkipClick}>
-          Skip
+          Skip this Activity
         </button>
         <button className="completed-button" onClick={handleCompletedClick}>
-           Mark Completed
         </button>
       </div>
     </div>
