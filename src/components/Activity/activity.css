@@ -69,6 +69,13 @@
   margin-right: 2em;
 }
 
+.skip-button:hover,
+.completed-button:hover,
+.completed-list-button:hover {
+  box-shadow: 0 0 20px yellow;
+  border: 2px solid yellow;
+}
+
 .light-mode .skip-button,
 .light-mode .completed-button,
 .light-mode .completed-list-button {
@@ -88,5 +95,11 @@
   .completed-button {
     padding: 0.6em 0.7em;
     margin: 0.5em;
+  }
+}
+
+@media (max-width: 440px) {
+  .completed-list-container {
+    margin-top: -150px;
   }
 }
