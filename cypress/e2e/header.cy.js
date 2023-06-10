@@ -1,9 +1,9 @@
 describe("header", () => {
   beforeEach(() => {
-    cy.intercept("GET", "http://www.boredapi.com/api/activity", {
+    cy.intercept("GET", "https://www.boredapi.com/api/activity", {
       fixture: "activityFixture1.json",
     });
-    cy.visit("http://localhost:3000/");
+    cy.visit("http://localhost:3000");
   });
 
   it("should have logo", () => {
@@ -18,6 +18,7 @@ describe("header", () => {
   });
 
   it("should switch between light and dark mode", () => {
+    
     cy.get(".toggle-btn").should("have.text", "Switch to Light Mode");
     cy.get(".toggle-btn").click();
     cy.get(".toggle-btn").should("have.text", "Switch to Dark Mode");

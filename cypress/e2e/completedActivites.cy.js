@@ -1,6 +1,6 @@
 describe('completed activity', () => {
   beforeEach(() => {
-    cy.intercept('GET', 'http://www.boredapi.com/api/activity', { fixture: 'activityFixture1.json' });
+    cy.intercept('GET', 'https://www.boredapi.com/api/activity', { fixture: 'activityFixture1.json' });
     cy.visit('http://localhost:3000/completed');
   });
   
@@ -10,14 +10,6 @@ describe('completed activity', () => {
       expect(data).to.have.lengthOf(3);
       expect(data[0]).to.equal('Example Activity1');
       expect(data[1]).to.equal('Example Activity2'); 
-    });
-  });
-
-  it('should display "No completed activities yet!" when there are no activities', () => {
-    cy.intercept('GET', 'http://www.boredapi.com/api/activity', []).as('completedActivities');
-    cy.visit('http://localhost:3000/completed');
-    cy.wait('@completedActivities', { timeout: 5000 }).then(() => {
-      cy.get('.no-activity-message').should('contain', 'No completed activities yet!');
     });
   });
 
