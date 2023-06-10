@@ -1,70 +1,56 @@
-# Getting Started with Create React App
-SHOW SEEKER
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Boredom Busters
 
-## Available Scripts
+## Introduction
+Welcome to Boredom Busters, your ultimate boredom-fighting app! Developed as a  final solo project for mod3 at Turing, Boredom Busters was created to provide you with exciting activities and combat monotony.
 
-In the project directory, you can run:
+With Boredom Busters,  you have the flexibility to switch between light and dark modes, ensuring a visually comfortable experience based on your preference. You will discover a random activity every time you load the page. If the suggested activity doesn't suit your preference, simply skip it and get a new one. Once you've completed an activity, mark it as done to keep track of your accomplishments and get your next activity.
 
-### `npm start`
+The app also offers a convenient list of your completed tasks, allowing you to look back on your achievements and stay motivated. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Boredom Busters is designed to be user-friendly and intuitive, providing a seamless browsing experience. Say goodbye to boredom and dive into a world of exciting activities with Boredom Busters. Get ready to unleash your creativity and enjoy endless entertainment!
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Deployment
 
-### `npm test`
+App is deployed at: [Boredom Busters]()
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Contributors
+  - Rachel Brendel [GitHub](https://github.com/brendel-r) / [LinkedIn](https://www.linkedin.com/in/rachel-brendel/)
 
-### `npm run build`
+## Goals and Objectives
+- Continue building understanding with React fundamentals
+- Create a multi-page UX using Router
+- Practice implementing cypress testing
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Features
+  - Random activity on page load
+  - Skip an activity you done like
+  - Mark activity as completed
+  - View completed activities
+  - Light/Dark mode
+  
+## Context 
+Building Boredom Busters has been an exciting solo project. Utilizing React, PropTypes, Cypress, JavaScript, HTML, and CSS, I have created an exceptional app for entertainment and combating boredom.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+React provides dynamic and responsive user interfaces, ensuring a seamless experience. PropTypes enhances code maintainability, while JavaScript adds functionality and interactivity. Cypress guarantees the app's quality through automated testing.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+By combining HTML and CSS, I've crafted visually appealing web pages for an attractive and user-friendly design. Boredom Busters offers a diverse range of activities to combat boredom effectively.
 
-### `npm run eject`
+![Boredom Buster Preview](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTM3MDAxOTVmZGM5MTViMzMxMGE3MDIyOGNlYjhlMzVhODY2M2JhMiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/EpkZDJd9MdZEZyAN56/giphy.gif)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Set Up
+1. Fork and clone this repo
+1. `cd` into the file
+1. Run `npm install` followed by `npm start`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Technologies
+  - Javascript
+  - HTML
+  - CSS
+  - React
+  - Cypress
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Sources
+  - [MDN](http://developer.mozilla.org/en-US/)
+  - [W3Schools](https://www.w3schools.com/)
+  - [React Docs](https://react.dev/reference/react)
+  - [Cypress Docs](https://docs.cypress.io/guides/overview/why-cypress)
