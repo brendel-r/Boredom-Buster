@@ -14,13 +14,13 @@ describe('completed activity', () => {
   });
 
   it('logo', () => {
-    cy.intercept('GET', 'http://www.boredapi.com/api/activity', { fixture: 'activityFixture1.json' });
+    // cy.intercept('GET', 'http://www.boredapi.com/api/activity', { fixture: 'activityFixture1.json' });
     cy.get('img').click();
     cy.url().should('eq', 'http://localhost:3000/');
   });
 
   it('return button', () => {
-    cy.intercept('GET', 'http://www.boredapi.com/api/activity', { fixture: 'activityFixture1.json' });
+    // cy.intercept('GET', 'http://www.boredapi.com/api/activity', { fixture: 'activityFixture1.json' });
 
     cy.get('.return-button').click();
     cy.url().should('eq', 'http://localhost:3000/');
