@@ -15,6 +15,7 @@ const CompletedActivities = ({ completedActivities }) => {
       <div className="completed-activities-container">
         <h3>{completedActivities.length === 0 ? "No completed activities" : "Completed Activities"}</h3>
         {completedActivities.length === 0}
+
         <button className="return-button" onClick={handleReturnHome}>
           Return to Home
         </button>
