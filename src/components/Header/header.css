@@ -46,6 +46,11 @@
   border: 2px solid blue;
 }
 
+.mode-toggle-button:hover {
+  box-shadow: 0 0 20px rgb(44, 167, 223);
+  border: 2px solid rgb(44, 167, 223);
+}
+
 .toggle-btn {
   margin-right: 5em;
 }
@@ -61,13 +66,11 @@
 
 @media (max-width: 1660px) {
   .header-container {
-    flex-direction: column-reverse;
-    line-height: em;
+    line-height: 1em;
   }
 
   .header-content {
     flex-direction: column;
-    margin-bottom: ;
   }
 
   .mode-toggle-button {
@@ -80,11 +83,6 @@
 }
 
 @media (max-width: 560px) {
-  .header-container {
-    flex-direction: column-reverse;
-    line-height: 1em;
-  }
-
   .header-content {
     flex-direction: column;
     margin-bottom: 2em;

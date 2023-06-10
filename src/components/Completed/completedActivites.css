@@ -4,9 +4,9 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  border: 1px solid palevioletred;
+  box-shadow: 0 0 15px rgb(233, 66, 225);
+  border: 2px solid rgb(233, 66, 225);
   border-radius: 25px;
-  box-shadow: 0 0 15px palevioletred;
   padding: 1em;
   text-shadow: 0 0 30px palevioletred;
   margin: 0 auto;
@@ -14,7 +14,7 @@
 }
 
 .completed-banner {
-  color: palevioletred;
+  color: rgb(233, 66, 225);
   font-size: 2.5em;
   margin-bottom: 0.5em;
   padding: 0;
@@ -25,11 +25,16 @@
   margin-top: 3em;
   cursor: pointer;
   border-radius: 15px;
-  box-shadow: 0 0 15px palevioletred;
-  border: 2px solid palevioletred;
+  box-shadow: 0 0 15px rgb(233, 66, 225);
+  border: 2px solid rgb(233, 66, 225);
   padding: 0.6em;
   font-size: 0.6em;
   font-weight: bold;
+}
+
+.return-button:hover {
+  box-shadow: 0 0 15px palevioletred;
+  border: 2px solid palevioletred;
 }
 
 .light-mode .return-button {
@@ -45,7 +50,7 @@
 .completed-activities-container h3,
 .completed-activities-container.light-mode ul li,
 .completed-activities-container.dark-mode ul li {
-  color: palevioletred;
+  color: rgb(233, 66, 225);
 }
 
 .completed-activities-container ul {
