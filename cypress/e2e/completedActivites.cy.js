@@ -1,6 +1,6 @@
 describe('completed activity', () => {
   beforeEach(() => {
-    cy.intercept('GET', 'http://www.boredapi.com/api/activity', { fixture: 'activityFixture1.json' });
+    cy.intercept('GET', 'https://www.boredapi.com/api/activity', { fixture: 'activityFixture1.json' });
     cy.visit('http://localhost:3000/completed');
   });
   
