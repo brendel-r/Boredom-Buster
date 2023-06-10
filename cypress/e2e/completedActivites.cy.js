@@ -13,13 +13,13 @@ describe('completed activity', () => {
     });
   });
 
-  it('logo', () => {
+  it('logo will return you to main page', () => {
     // cy.intercept('GET', 'http://www.boredapi.com/api/activity', { fixture: 'activityFixture1.json' });
     cy.get('img').click();
     cy.url().should('eq', 'http://localhost:3000/');
   });
 
-  it('return button', () => {
+  it('return button will return you to main page', () => {
     // cy.intercept('GET', 'http://www.boredapi.com/api/activity', { fixture: 'activityFixture1.json' });
 
     cy.get('.return-button').click();
