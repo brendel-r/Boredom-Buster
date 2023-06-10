@@ -33,5 +33,6 @@ describe('completed activity', () => {
     cy.visit('http://localhost:3000/completed');
     
     cy.get('.completed-activities-container').contains('No completed activities');
+
   });
 });
