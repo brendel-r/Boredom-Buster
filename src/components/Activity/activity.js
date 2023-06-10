@@ -65,7 +65,7 @@ const Activity = ({ addCompletedActivity }) => {
           className="completed-list-button"
           onClick={handleShowCompletedList}
         >
-          Completed Activity List
+          View Completed Activity List
         </button>
       </div>
 
@@ -88,7 +88,7 @@ const Activity = ({ addCompletedActivity }) => {
           Skip
         </button>
         <button className="completed-button" onClick={handleCompletedClick}>
-          Completed
+           Mark Completed
         </button>
       </div>
     </div>
