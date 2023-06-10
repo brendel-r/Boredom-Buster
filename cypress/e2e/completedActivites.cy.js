@@ -25,4 +25,12 @@ describe('completed activity', () => {
     cy.get('.return-button').click();
     cy.url().should('eq', 'http://localhost:3000/');
   });
+
+  it('should display "No completed activities yet!" when there are no tasks', () => {
+    // Mocking the response with an empty array to simulate no completed activities
+    cy.intercept('GET', 'http://www.boredapi.com/api/activity', { fixture: 'emptyFixture.json' });
+    cy.visit('http://localhost:3000/completed');
+
+    cy.contains('No completed activities yet!').should('exist');
+  });
 });

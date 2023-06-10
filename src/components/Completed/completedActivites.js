@@ -10,17 +10,22 @@ const CompletedActivities = ({ completedActivities }) => {
     history.push("/");
   };
 
-  if (!completedActivities || !Array.isArray(completedActivities)) {
-    return null;
+  if (!completedActivities || !Array.isArray(completedActivities) || completedActivities.length === 0) {
+    return (
+      <div className="completed-activities-container">
+        <h3>No completed activities yet!</h3>
+        <button className="return-button" onClick={handleReturnHome}>
+          Return to Home
+        </button>
+      </div>
+    );
   }
 
   return (
     <div className="completed-activities-container">
       <h3>Completed Activities</h3>
       <ul>
-        {console.log(completedActivities)}
         {completedActivities.map((activity, index) => (
-          
           <li key={index}>
             <span className="list-icon">&#10003;</span>&nbsp;{activity}
           </li>
